@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #111;
+}
+
+div {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: move10 10s infinite linear, colorEdge 10s infinite steps(10);
+}
+
+@keyframes move10 {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(100px, 50px); }
+    20% { transform: translate(350px, 20px); }
+    30% { transform: translate(450px, 150px); }
+    40% { transform: translate(380px, 400px); }
+    50% { transform: translate(200px, 450px); }
+    60% { transform: translate(50px, 350px); }
+    70% { transform: translate(10px, 200px); }
+    80% { transform: translate(120px, 100px); }
+    90% { transform: translate(280px, 80px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes colorEdge {
+    0% { filter: hue-rotate(0deg) brightness(1); }
+    10% { filter: hue-rotate(36deg) brightness(1.1); }
+    20% { filter: hue-rotate(72deg) brightness(1.2); }
+    30% { filter: hue-rotate(108deg) brightness(1.1); }
+    40% { filter: hue-rotate(144deg) brightness(1); }
+    50% { filter: hue-rotate(180deg) brightness(1.1); }
+    60% { filter: hue-rotate(216deg) brightness(1.2); }
+    70% { filter: hue-rotate(252deg) brightness(1.1); }
+    80% { filter: hue-rotate(288deg) brightness(1); }
+    90% { filter: hue-rotate(324deg) brightness(1.1); }
+    100% { filter: hue-rotate(360deg) brightness(1); }
+}
